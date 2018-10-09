@@ -26,7 +26,7 @@
 
 <h1>New User</h1>
 
- <%= f.fields_for :user, @post.comments.last.build_user do |user_fields|%>
+ <%= f.fields_for :user, @post.comments.last.users.build do |user_fields|%>
  <br>
     Username:
     <%= user_fields.text_field :username %>
