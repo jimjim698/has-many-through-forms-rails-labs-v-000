@@ -4,7 +4,7 @@
 <ul>
 <%@post.comments.each do |comment|%>
 
-<h3><li><%=comment.user.username%> says <%=comment.content%></li></h3>
+<h3><li><%=if comment.user%><%=comment.user.username%> says<%end%> <%=comment.content%></li></h3>
 <%end%>
 
 </ul>
