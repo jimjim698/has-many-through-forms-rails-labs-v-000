@@ -1,6 +1,9 @@
 <h1><%=@post.title%></h1><br>
-<%@post.categories.each do |cat|%>
 <h3>Categeory: </h3>
+<%@post.categories.each do |cat|%>
+<%=cat.name%>
+<%end%>
+
 <h2><%=@post.content%></h2><br>
 
 <ul>
