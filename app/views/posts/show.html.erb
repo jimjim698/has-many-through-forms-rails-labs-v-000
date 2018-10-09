@@ -21,12 +21,17 @@
 <%=f.hidden_field :post_id%>
 <%=f.text_area :content%>
 <%=f.collection_select :user_id, User.all, :id, :username, include_blank: "Choose User" %>
-<%= f.fields_for :user, @post.comments.last.user.build do |user_fields| %>
-    <%= user_fields.text_field :name %>
-  <% end %>
-<%=f.submit%>
 
-   <%end%>
+  Create A User to Write As:
+  <%= f.fields_for :user, @post.comments.last.build_user do |user_fields|%>
+ <br>
+    Username:
+    <%= user_fields.text_field :username %>
+    Email:
+    <%= user_fields.text_field :email %>
+  <% end %>
+   <%= f.submit %>
+<% end %>
 
 </ul>
 
