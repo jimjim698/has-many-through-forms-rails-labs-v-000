@@ -20,6 +20,7 @@
 <%=form_for @post.comments.build do |f|%>
 <%=f.hidden_field :post_id%>
 <%=f.text_area :content%>
+<%=f.submit%>
 <%end%>
 
 </ul>
