@@ -22,7 +22,7 @@
 <%=f.text_area :content%>
 <%=f.collection_select :user_id, User.all, :id, :username, include_blank: "Choose User" %>
 <%=f.submit%>
-<%end%>
+
 
 <h1>New User</h1>
 
@@ -34,6 +34,7 @@
     <%= user_fields.text_field :email %>
   <% end %>
    <%= f.submit %>
+   <%end%>
 
 </ul>
 
