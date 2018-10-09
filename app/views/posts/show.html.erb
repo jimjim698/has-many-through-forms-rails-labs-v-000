@@ -22,12 +22,11 @@
 <%=f.text_area :content%>
 <%=f.collection_select :user_id, User.all, :id, :username, include_blank: "Choose User" %>
 
-  Create A User to Write As:
+ <h1>Create New User</h1>
   <%= f.fields_for :user, @post.comments.last.build_user do |user_fields|%>
- <br>
-    Username:
+    <h2>Username:</h2>
     <%= user_fields.text_field :username %>
-    Email:
+    <h2>Email:</h2>
     <%= user_fields.text_field :email %>
   <% end %>
    <%= f.submit %>
